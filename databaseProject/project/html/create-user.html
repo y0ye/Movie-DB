@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Create User</h2>
+
+<form action="..\php\create_user.php" method="post">
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username" required><br>
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password">
+  <input type="checkbox" onclick="showHidePassword()">Show Password<br>
+  <input type="submit" value="Submit">
+</form> 
+
+<script>
+  function showHidePassword() {
+      var x = document.getElementById("password");
+      if (x.type === "password") {
+          x.type = "text";
+      } else {
+          x.type = "password";
+      }
+  }
+  </script>
+
+</body>
+</html>

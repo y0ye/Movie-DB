@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete a Review</title>
+</head>
+<body>
+    <h1>Delete a Review</h1>
+    <form action="..\php\delete_review.php" method="post">
+        <label for="reviewId">Review ID:</label><br>
+        <input type="text" id="reviewId" name="reviewId"><br>
+        <label for="userId">User ID:</label><br>
+        <input type="text" id="userId" name="userId"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password">
+        <input type="checkbox" onclick="showHidePassword()">Show Password<br>
+        <input type="submit" value="Delete Review">
+    </form>
+    <script>
+        function showHidePassword() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+        </script>
+</body>
+</html>
